@@ -1,29 +1,67 @@
-# Todo Application
+# ✅ Task Management Application
+Live Link : https://todo-application-springboot-66hb.onrender.com/
 
-A Todo Web Application built using Spring Boot.
+A simple Task Management REST API built using **Java Spring Boot** with **MySQL Cloud Database** and deployed on **Render**.
 
-## Features
+## 🚀 Features
 
-- Add Tasks
-- Delete Tasks
-- Toggle Task Completion
-- MySQL Database
-- Thymeleaf UI
+- Create tasks
+- View tasks
+- Update tasks
+- Delete tasks
+- Cloud database storage
+- REST API architecture
 
-## Tech Stack
+## 🛠️ Technologies Used
 
+- Java 17
 - Spring Boot
 - Spring MVC
 - Spring Data JPA
-- Hibernate
+- Hibernate ORM
 - MySQL
-- Thymeleaf
 - Maven
+- Aiven Cloud Database
+- Render Cloud
 
-## Run
+## 🏗️ Architecture
 
-1. Clone the repository
-2. Create a MySQL database named `todo_app`
-3. Update `application.properties`
-4. Run the project
 
+Client
+|
+Controller
+|
+Service
+|
+Repository
+|
+Hibernate JPA
+|
+MySQL Database
+
+
+## ⚙️ Development
+
+Developed a backend application using Spring Boot following a layered architecture.
+
+Implemented CRUD operations using REST APIs and connected the application with an Aiven MySQL database using Hibernate and JPA for data persistence.
+
+## ☁️ Deployment
+
+- Code hosted on GitHub
+- Database hosted on Aiven Cloud
+- Backend deployed on Render
+- Production database configuration managed using environment variables
+
+## 🔗 API Endpoints
+
+
+GET /tasks - Fetch all tasks
+POST /tasks - Create new task
+PUT /tasks/{id} - Update task
+DELETE /tasks/{id} - Remove task
+
+
+## 📌 Project Goal
+The goal of this project was to build and deploy a production-ready backend application demonstrating REST API development, database integration, and cloud deployment.
+⭐ Built with Spring Boot & Cloud Technologies
