@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do Web App</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📝 Todo Application</h1>
+
+    <form action="/" method="post">
+        <input
+                type="text"
+                name="title"
+                placeholder="Enter a task..."
+                required>
+
+        <button type="submit">Add</button>
+    </form>
+
+    <div th:if="${#lists.isEmpty(tasks)}" class="empty">
+        No tasks available.
+    </div>
+
+    <div th:each="task : ${tasks}" class="task">
+
+        <span
+                th:text="${task.title}"
+                th:classappend="${task.completed} ? 'completed' : ''">
+        </span>
+
+        <div class="actions">
+
+            <a class="toggle"
+               th:href="@{/{id}/toggle(id=${task.id})}">
+                Toggle
+            </a>
+
+            <a class="delete"
+               th:href="@{/{id}/delete(id=${task.id})}">
+                Delete
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
